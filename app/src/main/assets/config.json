@@ -1,0 +1,11 @@
+{
+  "appName": "BITS SOLUTIONS",
+  "primaryColor": "#68a4f2",
+  "secondaryColor": "#aed768",
+  "logoAsset": "bitsLogo.png",
+  "features": {
+    "home": true,
+    "merchant": true,
+    "support": true
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Parametrable" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- optional: avoid white flash before Compose draws -->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>
