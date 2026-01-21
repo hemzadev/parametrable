@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">باراميتربل</string>
+
+    <string name="home">الدار</string>
+    <string name="settings">الإعدادات</string>
+    <string name="language">اللغة</string>
+    <string name="select_language">ختار اللغة</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+</resources>

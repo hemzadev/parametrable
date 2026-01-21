@@ -51,10 +51,10 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
 
     // Compose
-    implementation(platform("androidx.compose:compose-bom:2024.12.01"))
+    implementation(platform("androidx.compose:compose-bom:2026.01.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3:1.5.0-alpha12")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     // Activity + Navigation
@@ -73,6 +73,10 @@ dependencies {
 
     // Image loading (logo)
     implementation("io.coil-kt:coil-compose:2.7.0")
+
+    // Icons
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")
 
 
 }

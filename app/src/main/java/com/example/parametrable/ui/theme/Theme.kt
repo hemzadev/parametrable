@@ -2,7 +2,11 @@ package com.example.compose
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MotionScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -10,9 +14,12 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import com.example.parametrable.Config
+import com.example.parametrable.parseColor
 import com.example.parametrable.ui.theme.replyTypography
 import com.example.ui.theme.AppTypography
 
@@ -257,6 +264,7 @@ val unspecified_scheme = ColorFamily(
 )
 
 @Composable
+@OptIn( ExperimentalMaterial3ExpressiveApi::class)
 fun AppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
@@ -274,9 +282,78 @@ fun AppTheme(
   }
 
   MaterialTheme(
-    colorScheme = colorScheme,
-    typography = replyTypography,
-    content = content
+      //colorScheme = colorScheme,
+      colorScheme = colorScheme,
+      typography = replyTypography,
+      motionScheme = MotionScheme.expressive(),
+      content = content
   )
+}
+
+
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+fun ConfigTheme(
+    config: Config,
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val scheme = remember(config.primaryColor, config.secondaryColor, darkTheme) {
+        schemeFromConfig(
+            primaryHex = config.primaryColor,
+            secondaryHex = config.secondaryColor,
+            darkTheme = darkTheme
+        )
+    }
+
+    MaterialTheme(
+        colorScheme = scheme,
+        typography = replyTypography,
+        motionScheme = MotionScheme.expressive(),
+        content = content
+    )
+}
+
+fun schemeFromConfig(
+    primaryHex: String,
+    secondaryHex: String,
+    darkTheme: Boolean
+): ColorScheme {
+    val primary = parseColor(primaryHex)
+    val secondary = parseColor(secondaryHex)
+
+    return if (!darkTheme) {
+        lightColorScheme(
+            primary = primary,
+            onPrimary = Color.White,
+
+            secondary = secondary,
+            onSecondary = Color.White,
+
+            surface = Color.White,
+            onSurface = Color.Black,
+
+            surfaceVariant = primary.copy(alpha = 0.06f),
+            onSurfaceVariant = Color.Black.copy(alpha = 0.75f),
+
+            outline = primary.copy(alpha = 0.35f),
+        )
+    } else {
+        darkColorScheme(
+            primary = primary,
+            onPrimary = Color.Black,
+
+            secondary = secondary,
+            onSecondary = Color.Black,
+
+            surface = Color(0xFF101214),
+            onSurface = Color.White,
+
+            surfaceVariant = Color(0xFF1A1D20),
+            onSurfaceVariant = Color.White.copy(alpha = 0.78f),
+
+            outline = Color.White.copy(alpha = 0.35f),
+        )
+    }
 }
 

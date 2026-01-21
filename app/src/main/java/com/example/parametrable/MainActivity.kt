@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.example.compose.AppTheme
+import com.example.compose.ConfigTheme
 import kotlinx.serialization.json.Json
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         }.getOrElse { Config() }
 
         setContent {
-            AppTheme {
+            ConfigTheme(config = config) {
                 WhiteLabelApp(config)
             }
         }
