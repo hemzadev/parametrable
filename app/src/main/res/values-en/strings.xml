@@ -2,10 +2,35 @@
 <resources>
     <string name="app_name">Parametrable</string>
 
-    <string name="home">Home</string>
-    <string name="settings">Settings</string>
+    <!-- Home header -->
+    <string name="home_welcome">Welcome to %1$s</string>
+    <string name="home_subtitle">Manage your account and services</string>
+
+    <!-- Language -->
     <string name="language">Language</string>
     <string name="select_language">Select language</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
+
+    <!-- Sections -->
+    <string name="quick_actions">Quick Actions</string>
+
+    <string name="action_make_payment">Make Payment</string>
+    <string name="action_open_scanner">Scan QR Code</string>
+    <string name="action_unknown">Action</string>
+
+    <string name="section_merchant_title">Merchant Services</string>
+    <string name="section_merchant_desc">Manage your business transactions and inventory</string>
+
+    <string name="section_transactions_title">Transaction History</string>
+    <string name="section_transactions_desc">View all your past transactions and receipts</string>
+
+    <string name="section_support_title">Support Center</string>
+    <string name="section_support_desc">Get help and contact our support team</string>
+
+    <string name="section_settings_title">Settings</string>
+    <string name="section_settings_desc">Customize your app preferences</string>
+
+    <string name="section_unknown_title">Section</string>
+    <string name="section_unknown_desc">Open</string>
 </resources>

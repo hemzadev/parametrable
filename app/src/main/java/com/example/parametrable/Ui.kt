@@ -1,25 +1,17 @@
 package com.example.parametrable
 
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
-import coil.compose.AsyncImage
 import androidx.core.graphics.toColorInt
 import com.example.parametrable.ui.drawer.AppDrawer
 import com.example.parametrable.ui.nav.AppNavHost
 import com.example.parametrable.ui.shell.AppScaffold
+import com.example.parametrable.util.Config
 import kotlinx.coroutines.launch
 
 fun parseColor(hex: String, fallback: Color = Color(0xFF6750A4)): Color {

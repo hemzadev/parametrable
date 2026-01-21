@@ -2,10 +2,37 @@
 <resources>
     <string name="app_name">بارامتريبل</string>
 
-    <string name="home">الرئيسية</string>
-    <string name="settings">الإعدادات</string>
+    <!-- Home header -->
+    <string name="home_welcome">مرحبًا بك في %1$s</string>
+    <string name="home_subtitle">إدارة حسابك وخدماتك</string>
+
+    <!-- Language -->
     <string name="language">اللغة</string>
     <string name="select_language">اختر اللغة</string>
     <string name="confirm">تأكيد</string>
     <string name="cancel">إلغاء</string>
+
+    <!-- Sections -->
+    <string name="quick_actions">إجراءات سريعة</string>
+
+    <!-- Quick actions -->
+    <string name="action_make_payment">إجراء عملية دفع</string>
+    <string name="action_open_scanner">مسح رمز QR</string>
+    <string name="action_unknown">إجراء</string>
+
+    <!-- Home sections -->
+    <string name="section_merchant_title">خدمات التاجر</string>
+    <string name="section_merchant_desc">إدارة معاملاتك التجارية والمخزون</string>
+
+    <string name="section_transactions_title">سجل المعاملات</string>
+    <string name="section_transactions_desc">عرض جميع معاملاتك السابقة والإيصالات</string>
+
+    <string name="section_support_title">مركز الدعم</string>
+    <string name="section_support_desc">الحصول على المساعدة والتواصل مع فريق الدعم</string>
+
+    <string name="section_settings_title">الإعدادات</string>
+    <string name="section_settings_desc">تخصيص تفضيلات التطبيق</string>
+
+    <string name="section_unknown_title">قسم</string>
+    <string name="section_unknown_desc">فتح</string>
 </resources>

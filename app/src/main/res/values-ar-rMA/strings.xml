@@ -2,10 +2,37 @@
 <resources>
     <string name="app_name">باراميتربل</string>
 
-    <string name="home">الدار</string>
-    <string name="settings">الإعدادات</string>
+    <!-- Home header -->
+    <string name="home_welcome">مرحبا بك فـ %1$s</string>
+    <string name="home_subtitle">دبّر حسابك وخدماتك</string>
+
+    <!-- Language -->
     <string name="language">اللغة</string>
     <string name="select_language">ختار اللغة</string>
     <string name="confirm">تأكيد</string>
     <string name="cancel">إلغاء</string>
+
+    <!-- Sections -->
+    <string name="quick_actions">إجراءات سريعة</string>
+
+    <!-- Quick actions -->
+    <string name="action_make_payment">دير شي خلصة</string>
+    <string name="action_open_scanner">سكانّي QR</string>
+    <string name="action_unknown">إجراء</string>
+
+    <!-- Home sections -->
+    <string name="section_merchant_title">خدمات التاجر</string>
+    <string name="section_merchant_desc">دبّر المعاملات ديالك والستوك</string>
+
+    <string name="section_transactions_title">تاريخ المعاملات</string>
+    <string name="section_transactions_desc">شوف جميع المعاملات والفواتير</string>
+
+    <string name="section_support_title">مركز الدعم</string>
+    <string name="section_support_desc">طلب المساعدة وتواصل مع الدعم</string>
+
+    <string name="section_settings_title">الإعدادات</string>
+    <string name="section_settings_desc">بدّل إعدادات التطبيق</string>
+
+    <string name="section_unknown_title">قسم</string>
+    <string name="section_unknown_desc">حلّ</string>
 </resources>

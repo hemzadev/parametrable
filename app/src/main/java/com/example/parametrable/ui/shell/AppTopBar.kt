@@ -25,7 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.example.parametrable.Config
+import com.example.parametrable.util.Config
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

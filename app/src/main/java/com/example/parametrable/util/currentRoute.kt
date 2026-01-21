@@ -1,4 +1,4 @@
-package com.example.parametrable.utils
+package com.example.parametrable.util
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

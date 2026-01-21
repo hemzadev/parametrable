@@ -9,8 +9,10 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
-import com.example.parametrable.utils.currentRoute
+import com.example.parametrable.util.currentRoute
+import com.example.parametrable.R
 
 
 @Composable
@@ -24,19 +26,43 @@ fun AppBottomBar(
             NavigationBarItem(
                 selected = currentRoute(nav) == route,
                 onClick = { onTabClick(route) },
-                icon = { Icon(routeIcon(route), contentDescription = route) },
+                icon = { RouteIcon(route) },
                 label = { Text(routeLabel(route)) }
             )
         }
     }
 }
 
-private fun routeIcon(route: String) = when (route) {
-    "home" -> Icons.Filled.Home
-    "merchant" -> Icons.Filled.ShoppingCart
-    "support" -> Icons.Filled.Call
-    else -> Icons.Filled.Home
+@Composable
+private fun RouteIcon(route: String) {
+    when (route) {
+        "home" -> {
+            Icon(
+                painter = painterResource(R.drawable.home_24px),
+                contentDescription = "Home"
+            )
+        }
+        "merchant" -> {
+            Icon(
+                painter = painterResource(R.drawable.store_24px),
+                contentDescription = "Merchant"
+            )
+        }
+        "support" -> {
+            Icon(
+                painter = painterResource(R.drawable.support_agent_24px),
+                contentDescription = "Support"
+            )
+        }
+        else -> {
+            Icon(
+                imageVector = Icons.Filled.Home,
+                contentDescription = null
+            )
+        }
+    }
 }
+
 
 private fun routeLabel(route: String) =
     route.replaceFirstChar { it.uppercase() }

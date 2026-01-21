@@ -1,4 +1,4 @@
-package com.example.parametrable
+package com.example.parametrable.util
 
 import kotlinx.serialization.Serializable
 
@@ -9,6 +9,7 @@ data class Config (
     val secondaryColor: String = "",
     val logoAsset: String = "",
     val features: Features = Features(),
+    val language: LanguageConfig? = null,
     val homeScreen: HomeScreenConfig = HomeScreenConfig()
 )
 
@@ -20,26 +21,31 @@ data class Features (
 )
 
 @Serializable
+data class LanguageConfig(
+    val enabled: Boolean = false,
+    val supported: List<SupportedLanguage> = emptyList()
+)
+
+@Serializable
+data class SupportedLanguage(
+    val tag: String,
+    val enabled: Boolean
+)
+
+@Serializable
 data class HomeScreenConfig(
-    val welcomeMessage: String = "Welcome",
-    val subtitle: String = "Manage your account and services",
     val sections: List<HomeSection> = emptyList(),
     val quickActions: List<QuickAction> = emptyList()
 )
 
 @Serializable
 data class HomeSection(
-    val title: String,
-    val description: String,
-    val icon: String = "",
     val enabled: Boolean = true,
     val action: ActionType = ActionType.NONE
 )
 
 @Serializable
 data class QuickAction(
-    val label: String,
-    val icon: String = "",
     val enabled: Boolean = true,
     val action: ActionType = ActionType.NONE,
     val style: ButtonStyle = ButtonStyle.PRIMARY
@@ -64,3 +70,10 @@ enum class ButtonStyle {
     SECONDARY,
     OUTLINED
 }
+
+fun Config.enabledLanguageTags(): List<String> =
+    language?.takeIf { it.enabled }?.supported
+        ?.filter { it.enabled }
+        ?.map { it.tag }
+        .orEmpty()
+

@@ -3,59 +3,33 @@
   "primaryColor": "#68a4f2",
   "secondaryColor": "#aed768",
   "logoAsset": "bitsLogo.png",
+
   "features": {
     "home": true,
     "merchant": true,
     "support": true
   },
+
+  "language": {
+    "enabled": true,
+    "supported": [
+      { "tag": "en", "enabled": true },
+      { "tag": "fr", "enabled": true },
+      { "tag": "ar", "enabled": true },
+      { "tag": "ar-MA", "enabled": true }
+    ]
+  },
+
   "homeScreen": {
-    "welcomeMessage": "Welcome to BITS",
-    "subtitle": "Your complete payment solution",
     "quickActions": [
-      {
-        "label": "Make Payment",
-        "icon": "payment",
-        "enabled": true,
-        "action": "MAKE_PAYMENT",
-        "style": "PRIMARY"
-      },
-      {
-        "label": "Scan QR Code",
-        "icon": "qr_scanner",
-        "enabled": true,
-        "action": "OPEN_SCANNER",
-        "style": "SECONDARY"
-      }
+      { "action": "MAKE_PAYMENT", "enabled": true, "style": "PRIMARY" },
+      { "action": "OPEN_SCANNER", "enabled": true, "style": "SECONDARY" }
     ],
     "sections": [
-      {
-        "title": "Merchant Services",
-        "description": "Manage your business transactions and inventory",
-        "icon": "store",
-        "enabled": true,
-        "action": "NAVIGATE_MERCHANT"
-      },
-      {
-        "title": "Transaction History",
-        "description": "View all your past transactions and receipts",
-        "icon": "receipt",
-        "enabled": true,
-        "action": "VIEW_TRANSACTIONS"
-      },
-      {
-        "title": "Support Center",
-        "description": "Get help and contact our support team",
-        "icon": "support",
-        "enabled": true,
-        "action": "NAVIGATE_SUPPORT"
-      },
-      {
-        "title": "Settings",
-        "description": "Customize your app preferences",
-        "icon": "settings",
-        "enabled": false,
-        "action": "OPEN_SETTINGS"
-      }
+      { "action": "NAVIGATE_MERCHANT", "enabled": true },
+      { "action": "VIEW_TRANSACTIONS", "enabled": true },
+      { "action": "NAVIGATE_SUPPORT", "enabled": true },
+      { "action": "OPEN_SETTINGS", "enabled": false }
     ]
   }
 }

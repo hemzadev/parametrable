@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.parametrable.ActionType
-import com.example.parametrable.Config
+import com.example.parametrable.util.ActionType
+import com.example.parametrable.util.Config
 import com.example.parametrable.screens.HomeScreen
 
 @Composable

@@ -2,10 +2,37 @@
 <resources>
     <string name="app_name">Paramétrable</string>
 
-    <string name="home">Accueil</string>
-    <string name="settings">Paramètres</string>
+    <!-- Home header -->
+    <string name="home_welcome">Bienvenue sur %1$s</string>
+    <string name="home_subtitle">Gérez votre compte et vos services</string>
+
+    <!-- Language -->
     <string name="language">Langue</string>
     <string name="select_language">Choisir la langue</string>
     <string name="confirm">Confirmer</string>
     <string name="cancel">Annuler</string>
+
+    <!-- Sections -->
+    <string name="quick_actions">Actions rapides</string>
+
+    <!-- Quick actions -->
+    <string name="action_make_payment">Effectuer un paiement</string>
+    <string name="action_open_scanner">Scanner un QR code</string>
+    <string name="action_unknown">Action</string>
+
+    <!-- Home sections -->
+    <string name="section_merchant_title">Services commerçant</string>
+    <string name="section_merchant_desc">Gérez vos transactions commerciales et votre stock</string>
+
+    <string name="section_transactions_title">Historique des transactions</string>
+    <string name="section_transactions_desc">Consultez toutes vos transactions et reçus</string>
+
+    <string name="section_support_title">Centre de support</string>
+    <string name="section_support_desc">Obtenez de l’aide et contactez notre équipe de support</string>
+
+    <string name="section_settings_title">Paramètres</string>
+    <string name="section_settings_desc">Personnalisez les préférences de l’application</string>
+
+    <string name="section_unknown_title">Section</string>
+    <string name="section_unknown_desc">Ouvrir</string>
 </resources>
