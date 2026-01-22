@@ -33,4 +33,15 @@
 
     <string name="section_unknown_title">Section</string>
     <string name="section_unknown_desc">Open</string>
+
+    <!-- Performance card -->
+    <string name="performance_today_title">Today Performance</string>
+
+    <string name="performance_visits_label">Visits</string>
+    <string name="performance_agents_label">Agents</string>
+    <string name="performance_prospects_label">Prospects</string>
+
+    <string name="performance_progress_format">%1$d / %2$d</string>
+    <string name="performance_percent_format">%1$d%%</string>
+
 </resources>

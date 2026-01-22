@@ -58,9 +58,13 @@ fun HomeScreen(
             }
         }
 
-        item {
-            //PerformanceCard(config)
-            ScheduleCard(config)
+        if (homeConfig.performanceCard.enabled) {
+            item {
+                PerformanceCard(
+                    cardConfig = homeConfig.performanceCard,
+                    appPrimary = parseColor(config.primaryColor)
+                )
+            }
         }
 
         if (languageEnabled && enabledLanguageTags.isNotEmpty()) {

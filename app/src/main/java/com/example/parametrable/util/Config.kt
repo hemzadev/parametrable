@@ -1,5 +1,7 @@
 package com.example.parametrable.util
 
+import com.example.parametrable.config_wl.PerformanceCardConfig
+import com.example.parametrable.config_wl.ScheduleCardConfig
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -35,7 +37,10 @@ data class SupportedLanguage(
 @Serializable
 data class HomeScreenConfig(
     val sections: List<HomeSection> = emptyList(),
-    val quickActions: List<QuickAction> = emptyList()
+    val quickActions: List<QuickAction> = emptyList(),
+
+    val performanceCard: PerformanceCardConfig = PerformanceCardConfig(),
+    val scheduleCard: ScheduleCardConfig = ScheduleCardConfig()
 )
 
 @Serializable

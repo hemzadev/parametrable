@@ -3,13 +3,11 @@
   "primaryColor": "#68a4f2",
   "secondaryColor": "#aed768",
   "logoAsset": "bitsLogo.png",
-
   "features": {
     "home": true,
     "merchant": true,
     "support": true
   },
-
   "language": {
     "enabled": true,
     "supported": [
@@ -19,8 +17,17 @@
       { "tag": "ar-MA", "enabled": true }
     ]
   },
-
   "homeScreen": {
+    "performanceCard": {
+      "enabled": true,
+      "progressBarEnabled": true,
+      "indicatorsEnabled": true,
+      "styling": "STYLE_1"
+    },
+    "scheduleCard": {
+      "enabled": true,
+      "styling": "STYLE_2"
+    },
     "quickActions": [
       { "action": "MAKE_PAYMENT", "enabled": true, "style": "PRIMARY" },
       { "action": "OPEN_SCANNER", "enabled": true, "style": "SECONDARY" }
