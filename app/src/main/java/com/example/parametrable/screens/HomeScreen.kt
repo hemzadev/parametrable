@@ -4,6 +4,8 @@ import PerformanceCard
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -14,7 +16,8 @@ import com.example.parametrable.*
 import com.example.parametrable.R
 import com.example.parametrable.features.home.HomeSectionCard
 import com.example.parametrable.features.home.QuickActionButton
-import com.example.parametrable.features.home.ScheduleCard
+import com.example.parametrable.features.home.QuickActionSection
+import com.example.parametrable.features.home.QuickActionUi
 import com.example.parametrable.features.language.LanguageCard
 import com.example.parametrable.features.language.LanguageDialog
 import com.example.parametrable.features.language.setAppLanguage
@@ -73,23 +76,19 @@ fun HomeScreen(
             }
         }
 
-        val enabledQuickActions = homeConfig.quickActions.filter { it.enabled }
-        if (enabledQuickActions.isNotEmpty()) {
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(
-                        text = stringResource(R.string.quick_actions),
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                    enabledQuickActions.forEach { qa ->
-                        QuickActionButton(
-                            actionType = qa.action,
-                            style = qa.style,
-                            onClick = { onActionClick(qa.action) }
-                        )
-                    }
-                }
-            }
+        item {
+
+            QuickActionSection(
+                actions = listOf(
+                    QuickActionUi("New merchant", Icons.Outlined.AddBusiness) {
+                        onActionClick(ActionType.CREATE_MERCHANT)
+                    },
+                    QuickActionUi("Open merchant", Icons.Outlined.Badge) { /* TODO */ },
+                    QuickActionUi("My tour", Icons.Outlined.Route) { /* TODO */ },
+                    QuickActionUi("Create order", Icons.Outlined.ReceiptLong) { /* TODO */ },
+                ),
+                onAddClick = { /* open bottom sheet / dialog */ }
+            )
         }
 
         items(homeConfig.sections.filter { it.enabled }) { section ->

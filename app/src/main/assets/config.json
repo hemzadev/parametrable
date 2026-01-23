@@ -38,5 +38,150 @@
       { "action": "NAVIGATE_SUPPORT", "enabled": true },
       { "action": "OPEN_SETTINGS", "enabled": false }
     ]
+  },
+  "createMerchantScreen": {
+    "enabled": true,
+
+    "steps": [
+      {
+        "id": "CONTACT",
+        "enabled": true,
+        "titleKey": "step_contact",
+        "sections": [
+          {
+            "id": "CONTACT_FIELDS",
+            "enabled": true,
+            "titleKey": null,
+            "fields": {
+              "firstName": { "enabled": true, "required": true },
+              "lastName": { "enabled": true, "required": true },
+              "phone": { "enabled": true, "required": true },
+              "cin": { "enabled": true, "required": false },
+              "cinPicture": { "enabled": true, "required": false }
+            }
+          }
+        ]
+      },
+
+      {
+        "id": "MERCHANT",
+        "enabled": true,
+        "titleKey": "step_merchant",
+        "sections": [
+          {
+            "id": "BUSINESS_PROFILE",
+            "enabled": true,
+            "titleKey": "business_profile",
+            "fields": {
+              "legalStatus": {
+                "enabled": true,
+                "required": true,
+                "defaultValue": "PHYSICAL",
+                "options": ["PHYSICAL", "MORAL"]
+              },
+              "activity": { "enabled": true, "required": true },
+              "storePhone": { "enabled": true, "required": false },
+              "socialReason": { "enabled": true, "required": false },
+              "commercialName": { "enabled": true, "required": false }
+            }
+          },
+
+          {
+            "id": "LOCATION",
+            "enabled": false,
+            "titleKey": "location",
+            "fields": {
+              "city": { "enabled": true, "required": true },
+              "zone": { "enabled": true, "required": false },
+              "address": { "enabled": true, "required": false },
+              "billingAddress": { "enabled": true, "required": false },
+              "gps": { "enabled": true, "required": false }
+            }
+          },
+
+          {
+            "id": "WORKING_HOURS",
+            "enabled": true,
+            "titleKey": "working_hours",
+            "fields": {
+              "openingHour": { "enabled": true, "required": false },
+              "closingHour": { "enabled": true, "required": false }
+            }
+          },
+
+          {
+            "id": "LEGAL_IDENTIFIERS",
+            "enabled": true,
+            "titleKey": "legal_identifiers",
+            "fields": {
+              "patenteNumber": { "enabled": true, "required": false },
+              "ice": { "enabled": true, "required": false },
+              "rc": { "enabled": true, "required": false },
+              "taxId": { "enabled": true, "required": false }
+            }
+          },
+
+          {
+            "id": "PHOTOS",
+            "enabled": true,
+            "titleKey": "photos",
+            "fields": {
+              "exteriorPhoto": { "enabled": true, "required": false },
+              "interiorPhoto": { "enabled": true, "required": false }
+            }
+          },
+
+          {
+            "id": "LEGAL_DOCUMENTS",
+            "enabled": true,
+            "titleKey": "legal_documents",
+            "fields": {
+              "rcDocument": { "enabled": true, "required": false },
+              "iceDocument": { "enabled": true, "required": false },
+              "patenteDocument": { "enabled": true, "required": false }
+            }
+          }
+        ]
+      },
+
+      {
+        "id": "BANK",
+        "enabled": true,
+        "titleKey": "step_bank",
+        "sections": [
+          {
+            "id": "BANK_FIELDS",
+            "enabled": true,
+            "titleKey": null,
+            "fields": {
+              "bank": { "enabled": true, "required": true },
+              "rib": { "enabled": true, "required": true },
+              "ribDocument": { "enabled": true, "required": false }
+            }
+          }
+        ]
+      },
+
+      {
+        "id": "SEGMENTATION",
+        "enabled": true,
+        "titleKey": "step_segmentation",
+        "sections": [
+          {
+            "id": "SEGMENTATION_FIELDS",
+            "enabled": true,
+            "titleKey": null,
+            "fields": {
+              "csp": { "enabled": true, "required": false },
+              "clientType": { "enabled": true, "required": false },
+              "potential": { "enabled": true, "required": false },
+              "zone": { "enabled": true, "required": false },
+              "segmentationDocument": { "enabled": true, "required": false }
+            }
+          }
+        ]
+      }
+    ]
   }
+
 }

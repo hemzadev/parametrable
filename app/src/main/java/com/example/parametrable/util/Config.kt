@@ -1,5 +1,6 @@
 package com.example.parametrable.util
 
+import com.example.parametrable.config_wl.CreateMerchantScreenConfig
 import com.example.parametrable.config_wl.PerformanceCardConfig
 import com.example.parametrable.config_wl.ScheduleCardConfig
 import kotlinx.serialization.Serializable
@@ -12,7 +13,8 @@ data class Config (
     val logoAsset: String = "",
     val features: Features = Features(),
     val language: LanguageConfig? = null,
-    val homeScreen: HomeScreenConfig = HomeScreenConfig()
+    val homeScreen: HomeScreenConfig = HomeScreenConfig(),
+    val createMerchantScreen: CreateMerchantScreenConfig = CreateMerchantScreenConfig()
 )
 
 @Serializable
@@ -66,7 +68,11 @@ enum class ActionType {
     VIEW_TRANSACTIONS,
     CONTACT_SUPPORT,
     OPEN_SETTINGS,
-    EXTERNAL_LINK
+    EXTERNAL_LINK,
+
+
+
+    CREATE_MERCHANT
 }
 
 @Serializable

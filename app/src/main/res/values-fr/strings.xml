@@ -46,4 +46,83 @@
     <string name="performance_progress_format">%1$d / %2$d</string>
     <string name="performance_percent_format">%1$d%%</string>
 
+    <!-- Create Merchant -->
+    <string name="create_merchant_title">Créer un commerçant</string>
+
+    <!-- Steps -->
+    <string name="step_contact">Contact</string>
+    <string name="step_merchant">Commerçant</string>
+    <string name="step_bank">Banque</string>
+    <string name="step_segmentation">Segmentation</string>
+
+    <!-- Bottom buttons -->
+    <string name="previous">Précédent</string>
+    <string name="continue_next">Continuer</string>
+    <string name="create_merchant">Créer le commerçant</string>
+
+    <!-- Contact -->
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="cin_optional">CIN (Optionnel)</string>
+    <string name="cin_picture">Photo de la CIN</string>
+    <string name="optional_formats_limit">Optionnel • JPG, PNG jusqu’à 5 Mo</string>
+
+    <!-- Merchant -->
+    <string name="business_profile">Profil commercial</string>
+    <string name="physical_person">Personne physique</string>
+    <string name="legal_entity">Personne morale</string>
+    <string name="activity">Activité</string>
+    <string name="store_phone">Téléphone du magasin</string>
+    <string name="social_reason">Raison sociale</string>
+    <string name="commercial_name">Nom commercial</string>
+
+    <!-- Location -->
+    <string name="location">Localisation</string>
+    <string name="city">Ville</string>
+    <string name="zone">Zone</string>
+    <string name="address">Adresse</string>
+    <string name="billing_address">Adresse de facturation</string>
+    <string name="gps_coordinates">Coordonnées GPS</string>
+    <string name="gps_placeholder">31.6295, -7.9811</string>
+
+    <!-- Working hours -->
+    <string name="working_hours">Horaires de travail</string>
+    <string name="opening_time">Heure d’ouverture</string>
+    <string name="closing_time">Heure de fermeture</string>
+    <string name="opening_placeholder">09:00</string>
+    <string name="closing_placeholder">18:00</string>
+
+    <!-- Legal -->
+    <string name="legal_identifiers">Identifiants légaux</string>
+    <string name="patente_number">Numéro de patente</string>
+    <string name="ice">ICE</string>
+    <string name="rc">RC</string>
+    <string name="tax_id">Identifiant fiscal</string>
+
+    <!-- Photos -->
+    <string name="photos">Photos</string>
+    <string name="exterior_photo">Photo extérieure</string>
+    <string name="interior_photo">Photo intérieure</string>
+
+    <!-- Documents -->
+    <string name="legal_documents">Documents légaux</string>
+    <string name="rc_document">Document RC</string>
+    <string name="ice_document">Document ICE</string>
+    <string name="patente_document">Document patente</string>
+
+    <!-- Bank -->
+    <string name="bank_name">Nom de la banque</string>
+    <string name="rib">RIB</string>
+    <string name="rib_document">Document RIB</string>
+
+    <!-- Segmentation -->
+    <string name="csp">CSP</string>
+    <string name="client_type">Type de client</string>
+    <string name="potential">Potentiel</string>
+    <string name="segmentation_zone">Zone de segmentation</string>
+    <string name="segmentation_document">Document de segmentation</string>
+    <string name="optional_file_formats_limit">Optionnel • PDF/JPG/PNG jusqu’à 5 Mo</string>
+
+
 </resources>

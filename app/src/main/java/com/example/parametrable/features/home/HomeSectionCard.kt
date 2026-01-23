@@ -103,5 +103,7 @@ private fun getIconForAction(actionType: ActionType): ImageVector {
             contentDescription = "Home",
             modifier = Modifier.size(24.dp)
         )
+
+        else -> {}
     } as ImageVector
 }

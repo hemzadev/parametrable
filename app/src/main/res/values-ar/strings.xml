@@ -45,4 +45,83 @@
 
     <string name="performance_progress_format">%1$d / %2$d</string>
     <string name="performance_percent_format">%1$d%%</string>
+
+    <!-- Create Merchant -->
+    <string name="create_merchant_title">إنشاء تاجر</string>
+
+    <!-- Steps -->
+    <string name="step_contact">التواصل</string>
+    <string name="step_merchant">التاجر</string>
+    <string name="step_bank">البنك</string>
+    <string name="step_segmentation">التصنيف</string>
+
+    <!-- Bottom buttons -->
+    <string name="previous">السابق</string>
+    <string name="continue_next">متابعة</string>
+    <string name="create_merchant">إنشاء التاجر</string>
+
+    <!-- Contact -->
+    <string name="first_name">الاسم الشخصي</string>
+    <string name="last_name">اسم العائلة</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="cin_optional">رقم البطاقة الوطنية (اختياري)</string>
+    <string name="cin_picture">صورة البطاقة الوطنية</string>
+    <string name="optional_formats_limit">اختياري • JPG، PNG حتى 5 ميغابايت</string>
+
+    <!-- Merchant -->
+    <string name="business_profile">الملف التجاري</string>
+    <string name="physical_person">شخص ذاتي</string>
+    <string name="legal_entity">شخص معنوي</string>
+    <string name="activity">النشاط</string>
+    <string name="store_phone">هاتف المتجر</string>
+    <string name="social_reason">الاسم القانوني</string>
+    <string name="commercial_name">الاسم التجاري</string>
+
+    <!-- Location -->
+    <string name="location">الموقع</string>
+    <string name="city">المدينة</string>
+    <string name="zone">المنطقة</string>
+    <string name="address">العنوان</string>
+    <string name="billing_address">عنوان الفوترة</string>
+    <string name="gps_coordinates">إحداثيات GPS</string>
+    <string name="gps_placeholder">31.6295, -7.9811</string>
+
+    <!-- Working hours -->
+    <string name="working_hours">ساعات العمل</string>
+    <string name="opening_time">وقت الافتتاح</string>
+    <string name="closing_time">وقت الإغلاق</string>
+    <string name="opening_placeholder">09:00</string>
+    <string name="closing_placeholder">18:00</string>
+
+    <!-- Legal -->
+    <string name="legal_identifiers">المعرفات القانونية</string>
+    <string name="patente_number">رقم الباتانتا</string>
+    <string name="ice">ICE</string>
+    <string name="rc">RC</string>
+    <string name="tax_id">المعرف الضريبي</string>
+
+    <!-- Photos -->
+    <string name="photos">الصور</string>
+    <string name="exterior_photo">صورة خارجية</string>
+    <string name="interior_photo">صورة داخلية</string>
+
+    <!-- Documents -->
+    <string name="legal_documents">الوثائق القانونية</string>
+    <string name="rc_document">وثيقة RC</string>
+    <string name="ice_document">وثيقة ICE</string>
+    <string name="patente_document">وثيقة الباتانتا</string>
+
+    <!-- Bank -->
+    <string name="bank_name">اسم البنك</string>
+    <string name="rib">RIB</string>
+    <string name="rib_document">وثيقة RIB</string>
+
+    <!-- Segmentation -->
+    <string name="csp">CSP</string>
+    <string name="client_type">نوع الزبون</string>
+    <string name="potential">الإمكانات</string>
+    <string name="segmentation_zone">منطقة التصنيف</string>
+    <string name="segmentation_document">وثيقة التصنيف</string>
+    <string name="optional_file_formats_limit">اختياري • PDF/JPG/PNG حتى 5 ميغابايت</string>
+
 </resources>

@@ -99,5 +99,7 @@ private fun getIconForAction(actionType: ActionType): ImageVector {
         ActionType.OPEN_SETTINGS -> androidx.compose.material.icons.Icons.Default.Settings
         ActionType.EXTERNAL_LINK -> androidx.compose.material.icons.Icons.Default.OpenInNew
         ActionType.NONE -> androidx.compose.material.icons.Icons.Default.Home
+        ActionType.CREATE_MERCHANT -> androidx.compose.material.icons.Icons.Default.Home
+
     }
 }
