@@ -12,11 +12,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.parametrable.features.common.CreateMerchant
 import com.example.parametrable.screens.HomeScreen
+import com.example.parametrable.screens.TourScreen
 import com.example.parametrable.util.ActionType
 import com.example.parametrable.util.Config
 
 object Routes {
     const val HOME = "home"
+
+    const val TOUR = "tour"
     const val MERCHANT = "merchant"
     const val SUPPORT = "support"
     const val CREATE_MERCHANT = "create_merchant"
@@ -43,6 +46,17 @@ fun AppNavHost(
         if (config.features.home) {
             composable(Routes.HOME) {
                 HomeScreen(
+                    config = config,
+                    onActionClick = { action ->
+                        handleAction(action, nav, config)
+                    }
+                )
+            }
+        }
+
+        if (config.features.tour) {
+            composable(Routes.TOUR) {
+                TourScreen(
                     config = config,
                     onActionClick = { action ->
                         handleAction(action, nav, config)

@@ -18,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.parametrable.R
+import com.example.parametrable.ui.nav.Routes
 import com.example.parametrable.util.Config
 import com.example.parametrable.util.currentRoute
 
@@ -48,6 +49,23 @@ fun AppDrawer(
                     onNavigate = onNavigate
                 )
             }
+
+            if (config.features.tour) {
+                DrawerItem(
+                    nav = nav,
+                    route = Routes.TOUR,
+                    label = "Tour",
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.mode_of_travel_24px),
+                            contentDescription = "Tour",
+                            modifier = Modifier.size(24.dp)
+                        )
+                    },
+                    onNavigate = onNavigate
+                )
+            }
+
 
             if (config.features.merchant) {
                 DrawerItem(

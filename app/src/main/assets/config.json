@@ -5,6 +5,7 @@
   "logoAsset": "bitsLogo.png",
   "features": {
     "home": true,
+    "tour": true,
     "merchant": true,
     "support": true
   },

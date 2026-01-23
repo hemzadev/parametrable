@@ -42,6 +42,12 @@ private fun RouteIcon(route: String) {
                 contentDescription = "Home"
             )
         }
+        "tour" -> {
+            Icon(
+                painter = painterResource(R.drawable.mode_of_travel_24px),
+                contentDescription = "Tour"
+            )
+        }
         "merchant" -> {
             Icon(
                 painter = painterResource(R.drawable.store_24px),

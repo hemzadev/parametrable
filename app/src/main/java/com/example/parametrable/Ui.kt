@@ -10,6 +10,7 @@ import androidx.navigation.compose.*
 import androidx.core.graphics.toColorInt
 import com.example.parametrable.ui.drawer.AppDrawer
 import com.example.parametrable.ui.nav.AppNavHost
+import com.example.parametrable.ui.nav.Routes
 import com.example.parametrable.ui.shell.AppScaffold
 import com.example.parametrable.util.Config
 import kotlinx.coroutines.launch
@@ -60,7 +61,8 @@ fun WhiteLabelApp(config: Config) {
 @Composable
 private fun rememberTabs(config: Config): List<String> =
     buildList {
-        if (config.features.home) add("home")
-        if (config.features.merchant) add("merchant")
-        if (config.features.support) add("support")
+        if (config.features.home) add(Routes.HOME)
+        if (config.features.tour) add(Routes.TOUR)
+        if (config.features.merchant) add(Routes.MERCHANT)
+        if (config.features.support) add(Routes.SUPPORT)
     }.ifEmpty { listOf("about") }

@@ -20,6 +20,7 @@ data class Config (
 @Serializable
 data class Features (
     val home: Boolean = false,
+    val tour: Boolean = false,
     val merchant: Boolean = false,
     val support: Boolean = false
 )
